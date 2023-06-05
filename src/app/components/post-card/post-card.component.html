@@ -1,0 +1,9 @@
+<div data-cy="post-card" class="card">
+    <div data-cy="post-title" class="title">
+        {{title |titlecase}}
+    </div>
+    <div data-cy="post-body" class="body">
+        {{body}}
+    </div>
+    <button data-cy="post-show-button" (click)="goToPost()">Show post</button>
+</div>

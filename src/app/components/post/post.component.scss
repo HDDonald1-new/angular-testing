@@ -1,0 +1,22 @@
+.post {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  min-height: 300px;
+  background: rgba($color: #db7272, $alpha: 0.3);
+  border: 1px solid black;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.post-content {
+  margin: 2rem 0;
+}
+
+button {
+  border-radius: 10%;
+  background: rgb(155, 108, 108);
+}

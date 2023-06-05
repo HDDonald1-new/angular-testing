@@ -1,0 +1,10 @@
+<div data-cy="post-block" class="post">
+    <div data-cy="post-header" class="header">
+        <span data-cy="post-title" class="title">{{title |titlecase}}</span>
+        <span data-cy="post-author" class="author-name">by {{author}}</span>
+    </div>
+    <p data-cy="post-content" class="post-content">
+        {{body}}
+    </p>
+    <button data-cy="post-back-button" (click)="back()">back</button>
+</div>

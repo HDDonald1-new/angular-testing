@@ -1,0 +1,23 @@
+<nav class="header">
+  <h1 data-cy="header">SiteName</h1>
+  <ul>
+    <li>
+      <a 
+        [routerLink]="['/']"
+        data-cy="posts-router-link"
+        routerLinkActive="active-link"
+        [routerLinkActiveOptions]="{exact: true}"> posts
+      </a>
+    </li>
+    <li>
+      <a 
+        [routerLink]="['/about']"
+        data-cy="about-router-link"
+        routerLinkActive="active-link"> about
+      </a>
+    </li>
+  </ul>
+</nav>
+<div class="main-container">
+  <router-outlet></router-outlet>
+</div>

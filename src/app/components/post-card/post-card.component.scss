@@ -1,0 +1,19 @@
+.card {
+    box-sizing: border-box;
+    width: 100%;
+    background: rgba($color: #db7272, $alpha: 0.3);
+    min-height: 200px;
+    border: 1px solid black;
+    margin: 1rem auto;
+    padding: 1rem;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+button {
+    border-radius: 10%;
+    background: rgb(155, 108, 108);
+}
+
+.body {
+    margin: 0.5rem 0;
+}

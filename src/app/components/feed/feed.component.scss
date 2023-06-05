@@ -1,0 +1,9 @@
+section {
+    margin: -1rem auto;
+    height: 93.5vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
