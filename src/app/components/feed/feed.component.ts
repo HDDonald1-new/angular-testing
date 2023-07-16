@@ -6,6 +6,7 @@ import { selectPosts } from 'root-store/selectors'
 import { Observable } from 'rxjs'
 import { Post } from '../../models/post.model'
 import { CoreService } from '../../services/core/core.service'
+import { DomSanitizer } from '@angular/platform-browser'
 
 @Component({
   templateUrl: './feed.component.html',
@@ -16,8 +17,12 @@ export class FeedComponent implements OnInit {
   posts$: Observable<Post[]>
   subtractData: number
 
-  constructor(private core: CoreService, private router: Router, private store$: Store) {
+  unsafeUrl = 'javascript:alert("script")'// blocked by default as xss
+  trustedUrl
+
+  constructor(private core: CoreService, private router: Router, private store$: Store, private sanitizer: DomSanitizer) {
     this.posts$ = store$.select(selectPosts)
+    this.trustedUrl = this.sanitizer.bypassSecurityTrustHtml(this.unsafeUrl)//can be called on HTML, STYLES, URL etc
   }
 
   ngOnInit(): void {
